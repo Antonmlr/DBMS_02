@@ -80,5 +80,9 @@ entity "Loan" as L {
 '
 ' ============================================================
 
+Author }|--|{ Book : "writes"
+Book ||--|{ Copy : "is available as"
+Member ||--o{ Loan : "places"
+Copy ||--o{ Loan : "is borrowed in"
 
 @enduml
